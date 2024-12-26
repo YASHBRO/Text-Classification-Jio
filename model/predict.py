@@ -13,3 +13,9 @@ class ModelPredictor:
             "prediction": prediction,
             "probability": probability.tolist(),
         }
+
+
+if __name__ == "__main__":
+    predictor = ModelPredictor("model/svm_model.pkl")
+    prediction = predictor.predict("Hello, world!")
+    print(prediction)
